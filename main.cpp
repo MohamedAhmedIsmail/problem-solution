@@ -5,16 +5,12 @@ int main()
 {
    int n;
    float divide=0.0;
-   float mini=1e5;
    cin>>n;
-   for(int i=1;i<=5;i++)
+   for(int i=5;i>=1;i--)
    {
-       divide=(n/(float)i);
-        if(divide<mini)
-        {
-            mini=ceil(divide);
-        }
+       divide+=(n/i);
+       n=n%i;
    }
-   cout<<mini<<endl;
+   cout<<divide<<endl;
     return 0;
 }
